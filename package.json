@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "@hydre/rgraph": "^4.3.5",
+    "express": "^4.17.1",
+    "ioredisgraph": "^2.1.4",
+    "redis": "^3.0.2",
+    "redisgraph.js": "^2.2.1"
+  },
+  "type": "module"
 }

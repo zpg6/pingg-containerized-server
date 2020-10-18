@@ -9,7 +9,7 @@ RUN npm install
 COPY . .
 
 ENV PORT=9000 \
-    REDIS_URL=redis://cache
+    REDIS_URL=redis
 
 EXPOSE 9000
 

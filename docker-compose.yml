@@ -5,10 +5,12 @@ services:
         build: ./
         ports: 
             - "9002:9000"
+        environment: 
+            - DOCKER_PORT=9002
         links: 
             - redis
     redis:
-        image: redis
+        image: redislabs/redisgraph
         container_name: cache
-        expose:
-            - 6379
+        expose: 
+            - "6379"
