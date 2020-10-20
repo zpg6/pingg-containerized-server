@@ -58,7 +58,8 @@ async function demo() {
 }
 
 app.get('/', (req,res) => {
-    res.statusCode(200)
+    res.status(200)
+    res.send('Success')
 })
 
 app.listen(port, ()=> {
