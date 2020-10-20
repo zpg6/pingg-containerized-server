@@ -8,6 +8,7 @@ import redis from 'redis'
 const client = redis.createClient( {port: 6379, host: process.env.REDIS_URL} );
 
 var graph;
+var counter = 0;
 
 
 client.on("error", function(error) {
@@ -59,7 +60,7 @@ async function demo() {
 
 app.get('/', (req,res) => {
     res.status(200)
-    res.send('Success')
+    res.send('Success ' + (++counter))
 })
 
 app.listen(port, ()=> {
