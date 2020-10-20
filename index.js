@@ -58,19 +58,7 @@ async function demo() {
 }
 
 app.get('/', (req,res) => {
-    try {
-        demo()
-        .then(something => {
-            res.send(something || 'hi')
-        }).catch(err => {
-            console.error(err)
-            res.send(err)
-        })
-    } catch (error) {
-        console.error(error)
-        res.send(error)
-    }
-    //res.send('yo!!')
+    res.statusCode(200)
 })
 
 app.listen(port, ()=> {
